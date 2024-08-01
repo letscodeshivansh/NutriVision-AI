@@ -45,10 +45,11 @@ st.header("NutriVision AI")
 
 image_path = 'assets/aidoctor.png'
 try:
-    st.image(image_path, caption='NutriVision AI', width=500)
+    st.image(image_path, caption='NutriVision AI', width=400)
 except Exception as e:
     st.error(f"Error loading image: {e}")
 
+input = st.text_input("Input Prompt: ", key="input")
 uploaded_file = st.file_uploader("Choose an Image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:

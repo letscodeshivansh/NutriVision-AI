@@ -49,6 +49,7 @@ try:
 except Exception as e:
     st.error(f"Error loading image: {e}")
 
+input = st.text_input("Input Prompt: ", key="input")
 uploaded_file = st.file_uploader("Choose an Image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:

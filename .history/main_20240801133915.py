@@ -41,14 +41,15 @@ def input_image_setup(uploaded_file):
 
 # Initialize our Streamlit app
 st.set_page_config(page_title="NutriVision AI")
-st.header("NutriVision AI")
 
 image_path = 'assets/aidoctor.png'
 try:
-    st.image(image_path, caption='NutriVision AI', width=500)
+    st.image(image_path, caption='Your AI-doctor', width=400)
 except Exception as e:
     st.error(f"Error loading image: {e}")
 
+st.header("NutriVision AI")
+input = st.text_input("Input Prompt: ", key="input")
 uploaded_file = st.file_uploader("Choose an Image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
