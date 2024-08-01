@@ -12,7 +12,7 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 # Function to load Google Gemini Pro Vision API and get response
 def get_gemini_response(prompt, image, input_text):
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-1.0-ultra Vision')
         response = model.generate_content([prompt, image[0], input_text])
         return response.text
     except Exception as e:
@@ -63,14 +63,12 @@ submit = st.button("Tell me the total calories")
 input_prompt = """
 You are an expert nutritionist. You need to see the food items from the image
 and calculate the total calories. Also, provide details of every food item with its calorie intake
-in the format below, :
+in the format below:
 
 1. Item 1 - number of calories
 2. Item 2 - number of calories
 ----
 ----
-
-And also summarize the foods that it is healthy or not...
 """
 
 # If submit button is clicked

@@ -70,7 +70,7 @@ in the format below, :
 ----
 ----
 
-And also summarize the foods that it is healthy or not...
+
 """
 
 # If submit button is clicked

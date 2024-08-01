@@ -69,8 +69,6 @@ in the format below, :
 2. Item 2 - number of calories
 ----
 ----
-
-And also summarize the foods that it is healthy or not...
 """
 
 # If submit button is clicked
